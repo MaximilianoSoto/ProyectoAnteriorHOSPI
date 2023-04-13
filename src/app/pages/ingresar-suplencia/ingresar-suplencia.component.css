@@ -1,0 +1,46 @@
+.container{
+  padding: 4%;
+  background-size: 60%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  background-color: rgb(255, 255, 255);
+  height: auto;
+  width: 60%;
+  border-radius: 4%;
+  border-bottom: solid   #072f4e;
+  border-top: solid #072f4e;
+
+
+}
+.gradient-custom {
+  background-color: aliceblue;
+  }
+
+
+#formGeneral{
+  border-radius: 4%;
+  margin-top: 1% ;
+  margin-bottom: 3%;
+
+
+}
+#btn-enviar{
+  background-color: rgb(46, 253, 46);
+}
+
+.btn-primary{
+  background-color: rgb(149, 156, 181);
+}
+.sub{
+
+  border: solid 5px whitesmoke;
+  padding-bottom: 10px;
+}
+.row{
+
+  align-items: center;
+  justify-content: center;
+}
+*{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

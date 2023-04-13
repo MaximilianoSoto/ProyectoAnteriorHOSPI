@@ -1,0 +1,7 @@
+.gradient-custom {
+  background-color: #072f4e;
+
+box-shadow: inset 0 -3em 3em rgba(1,0,0,0.1),
+             0 0  0 5px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+  }

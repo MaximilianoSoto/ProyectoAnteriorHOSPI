@@ -1,0 +1,484 @@
+<div>
+
+  <div class="container-fluid d-flex justify-content-center p-0 m-0 ">
+    <!-- container usuarios -->
+      <div class="sub-container col-md-5 m-3">
+        <div class="col-12 text-center">
+          <h3>Usuarios</h3>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center">
+          <div class="col-md-4 text-center">
+            <div class="card  mb-3 m-1" >
+              <div class="card-header"> <h2 style="color: rgb(255, 255, 255);">Total</h2></div>
+              <div class="card-body d-flex justify-content-center">
+                <h1 class="card-title">100</h1>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="card  mb-3 m-1" >
+              <div class="card-header"><h2 style="color:rgb(65, 219, 4);">Activos</h2></div>
+              <div class="card-body d-flex justify-content-center">
+                <h1 class="card-title">60</h1>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 text-center">
+            <div class="card  mb-3 m-1">
+              <div class="card-header"><h2 style="color: rgb(255, 0, 0);">Inactivos</h2></div>
+              <div class="card-body d-flex justify-content-center">
+                <h1 class="card-title">40</h1>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 d-flex ">
+          <div class="col-md-6 d-flex justify-content-center">
+            <!-- Btn activación modal crear usuario -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalUsuario"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill m-1" viewBox="0 0 16 16">
+              <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+            </svg>Crear usuario</button>
+
+
+            <!-- Modal crear usuario -->
+            <div class="modal fade" id="ModalUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalUsuario">Crear usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="row">
+                        <div class="col-6">
+                          <label class="form-label">Nombre</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-6">
+                          <label class="form-label">Apellidos</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <label class="form-label">Rut</label>
+                          <input type="text" class="form-control">
+                        </div>
+
+                      </div>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <label class="form-label">Contraseña</label>
+                          <input type="password" class="form-control">
+
+                        </div>
+                        <div class="col-6">
+                          <label class="form-label">Rol</label>
+                          <select class="form-select p-1" aria-label="Default select example">
+                            <option value="1">Admin</option>
+                            <option value="2">Jefe Dep. de las personas</option>
+                            <option value="3">Reclutador</option>
+                            <option value="4">Secretariado</option>
+                            <option value="5">Personal Dep. de las personas</option>
+                            <option value="6">Encargado de Área</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Crear</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-6 d-flex justify-content-center">
+            <!-- btn Activacion modal administar usuarios -->
+            <button class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#ModalAdministarUsuarios"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-gear m-1" viewBox="0 0 16 16">
+              <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+            </svg>Administar usuarios</button>
+
+            <!-- Modal administar usuarios -->
+            <div class="modal fade" id="ModalAdministarUsuarios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalAdministarUsuarios">USUARIOS</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <table class="table table-striped">
+                      <thead>
+                        <tr>
+                          <th scope="col">Rut</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellidos</th>
+                          <th scope="col">Rol</th>
+                          <th scope="col">estado</th>
+                          <th scope="col">Editar</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td></td>
+                          <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalEditUsuarios"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-gear" viewBox="0 0 16 16">
+                            <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+                          </svg>Editar</button> </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                          <td></td>
+                          <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalEditUsuarios"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-gear" viewBox="0 0 16 16">
+                            <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+                          </svg>Editar</button> </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td colspan="2">Larry the Bird</td>
+                          <td>@twitter</td>
+                          <td>@</td>
+                          <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalEditUsuarios"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-gear" viewBox="0 0 16 16">
+                            <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+                          </svg>Editar</button> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Modal edit usuario -->
+          <div class="modal fade" id="ModalEditUsuarios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">editar</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-6">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="col-6">
+                        <label class="form-label">Apellidos</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="form-label">Rut</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="col-md-6 pt-3">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            Activo
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                          <label class="form-check-label" for="exampleRadios2">
+                            Inactivo
+                          </label>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="row">
+                      <div class="col-6">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password" class="form-control">
+
+                      </div>
+                      <div class="col-6">
+                        <label class="form-label">Rol</label>
+                        <select class="form-select p-1" aria-label="Default select example">
+                          <option value="1">Admin</option>
+                          <option value="2">Jefe Dep. de las personas</option>
+                          <option value="3">Reclutador</option>
+                          <option value="4">Secretariado</option>
+                          <option value="5">Personal Dep. de las personas</option>
+                          <option value="6">Encargado de Área</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-container  m-3 d-inline justify-content-center">
+          <!-- container  suplencias -->
+          <div class="col-12 text-center">
+            <h3>Suplencias emitidas </h3>
+          </div>
+
+          <div class="col-12 d-flex">
+            <div class="col-md-6 text-center">
+              <div class="card mb-3 m-1" >
+                <div class="card-header"><h2 style="color: rgb(255, 255, 255);">Mes anterior</h2></div>
+                <div class="card-body d-flex justify-content-center">
+                  <h1 class="card-title">100</h1>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+              <div class="card mb-3 m-1" >
+                <div class="card-header"><h2 style="color: rgb(255, 255, 255);">Mes actual</h2></div>
+                <div class="card-body d-flex justify-content-center">
+                  <h1 class="card-title">60</h1>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 d-flex justify-content-center">
+            <div class="col-6">
+              <!-- btn Activacion modal Buscar suplencia -->
+              <button class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#ModalBuscarSuplencia"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search m-1" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>Buscar suplencia</button>
+              <!-- Modal Buscar suplencia -->
+                <div class="modal fade" id="ModalBuscarSuplencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ModalBuscarSuplencia">Suplencia</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="container container-fluid p-5">
+                          <form class="row g-3">
+                            <div class="d-flex justify-content-center">
+                              <h1>Buscar Suplencia</h1>
+                            </div>
+                            <div class="col-md-4">
+                              <label> Numero de Solicitud</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                              <label> Rut</label>
+                              <input type="number" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                              <label> Nombre y Apellidos</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                              <button class="btn btn-primary ">Buscar</button>
+                            </div>
+
+                          </form>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark m-1" viewBox="0 0 16 16">
+              <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
+            </svg>Reportes </button>
+          </div>
+      </div>
+  </div>
+
+
+
+  <div class="container-fluid d-flex justify-content-center p-0 m-0 ">
+      <!-- container Politicas -->
+      <div class="sub-container col-md-12 h-100 m-3 w-100">
+        <div class="col-12 text-center">
+          <h3>Politicas y Motivo de ausencia</h3>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center ">
+          <h4>Politica más usada en el mes anterior: </h4>
+          <h3 class="text-bg-light">Politica ""</h3>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center">
+          <h4>Motivo de ausencia más usado en el mes anterior:</h4>
+          <h3 class="text-bg-light">Motivo ""</h3>
+        </div>
+        <div class="col-12 d-flex ">
+
+
+            <div class="col-md-12 d-flex justify-content-center">
+              <!-- btn Activacion modal administar politicas y motivos de ausencia-->
+              <div class="col-6 d-flex justify-content-center"><button class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#ModalcrearPoliticas"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-gear m-1" viewBox="0 0 16 16">
+                <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+              </svg>Crear politicas o motivos </button></div>
+
+              <div class="col-6 d-flex justify-content-center "><button class="btn btn-primary "data-bs-toggle="modal" data-bs-target="#ModalAdminPoliticas"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-gear m-1" viewBox="0 0 16 16">
+                <path d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Zm9.886-3.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"/>
+              </svg>Administar politicas y motivos </button></div>
+
+
+
+              <!-- Modal administar politicas y motivos de ausencia  -->
+              <div class="modal fade" id="ModalAdminPoliticas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="ModalAdminPoliticas">Politicas y motivos de ausencia</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Todo
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Politicas
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                        <label class="form-check-label" for="exampleRadios3">
+                          Motivos de ausencia
+                        </label>
+                      </div>
+
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">codigo</th>
+                            <th scope="col">titulo</th>
+                            <th scope="col">descripcion</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+
+                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalEditPolitica">
+                                  Editar</button> </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalEditPolitica">
+                              Editar</button> </td>
+                          </tr>
+
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalEditPolitica">
+                              Editar</button> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Modal edit polititicas o motivo de ausencia  -->
+            <div class="modal fade" id="ModalEditPolitica" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalEditPolitica">editar </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="row">
+                        <div class="col-6">
+                          <label class="form-label">titulo</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-6">
+                          <label class="form-label">descripcion</label>
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6 pt-3">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                              Activa
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                              Inactiva
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      </div>
+  </div>
+</div>
